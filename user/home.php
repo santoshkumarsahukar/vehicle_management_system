@@ -81,30 +81,30 @@ if(isset($_SESSION['email']))
    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
        <div class="carousel-inner">
            <div class="carousel-item active">
-               <img src="images/image4.jpg" class="d-block w-100" alt="...">
+               <img src="images/bgd41.jpg" class="d-block w-100" alt="...">
            </div>
            <div class="carousel-item">
-               <img src="images/image2.jpg" class="d-block w-100" alt="...">
+               <img src="images/bgd11.jpg" class="d-block w-100" alt="...">
            </div>
            <div class="carousel-item">
-               <img src="images/image3.jpg" class="d-block w-100" alt="...">
+               <img src="images/bgd31.jpg" class="d-block w-100" alt="...">
            </div>
        </div>
-       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+       <!--<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
            <span class="sr-only">Previous</span>
        </a>
        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
            <span class="carousel-control-next-icon" aria-hidden="true"></span>
            <span class="sr-only">Next</span>
-       </a>
+       </a>-->
    </div>
    <div class="main-text hidden-xs ">
        <div>
            <div  class="row justify-content-center
   align-items-center" style="height:100vh" >
-               <marquee><center><h1 style="padding-bottom: 000px" class="text-info display-2 font-weight-bold">
-                           VEHICLE MANAGEMENT SYSTEM</h1></center></marquee>
+               <!--<center><h1 style="padding-bottom: 000px" class="text-warning display-2 font-weight-bold">
+                           VEHICLE MANAGEMENT SYSTEM</h1></center>-->
            </div>
            <!--  <h3>
 
@@ -135,36 +135,36 @@ if(isset($_SESSION['email']))
            <!-- end of tittle-->
 
            <!--vehicles-->
-
            <!-- end of tittle-->
            <div class="row">
                <div class="col-lg-3 col-sm-6">
                    <img src="images/image3.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php">Project One</a> </h2>
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=1">Project One</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-3 col-sm-6">
                    <img src="images/image1.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning">Project Two</h2>
+                   <h2 class="my-3 text-warning"><a href=vinfo.php?id=2">Project One</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-4 col-sm-6">
                    <img src="images/image2.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning">Project Three</h2>
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=14">Project One</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-5 col-sm-6">
                    <img src="images/image4.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning">Project Four</h2>
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=15">Project One</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
            </div>
        </div>
    </section>
+
    <!--end of project-->
    <section class="bg-light p-5">
        <div class="container-fulid">

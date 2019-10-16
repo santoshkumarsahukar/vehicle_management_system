@@ -36,7 +36,7 @@ $connection=mysqli_connect("localhost","root","","dbms");
        vehicle_mileage<input type="text" name="vmi"  ><br><br>
        vehicle_horsepower<input type="text" name="vhp"  ><br><br>
        vehicle_images<input type="file" name="image"  ><br><br>
-       <input type="submit" value="submit">
+       <input type="submit"  name="submit" value="submit">
        <button><a href="home.php">BACK</a></button>
 
 
