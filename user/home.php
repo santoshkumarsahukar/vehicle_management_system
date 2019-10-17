@@ -156,7 +156,7 @@ if(isset($_SESSION['email']))
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-5 col-sm-6">
-                   <img src="images/image4.jpg" class="img-thumbnail">
+                   <img src="images/bgd11.jpg" class="img-thumbnail">
                    <h2 class="my-3 text-warning"><a href="vinfo.php?id=15">Project One</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
@@ -179,7 +179,7 @@ if(isset($_SESSION['email']))
            <div class="row text-center">
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="fas fa-desktop fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary">Development</h1>
+                   <h1 class="text-secondary"><a href="service.php">Development</a> </h1>
                    <p class="text-muted my-4">With our experience from the world of sports car series production, we can support you at every stage
                        of the entire product development process: from the concept phase to series production.  </p>
                    <a href="#" class="btn btn-outline-warning">Learn More</a>
@@ -187,14 +187,14 @@ if(isset($_SESSION['email']))
 
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="far fa-edit fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary">Design</h1>
+                   <h1 class="text-secondary"><a href="service.php">Design</a> </h1>
                    <p class="text-muted my-4"> the process of developing the appearance, and to some extent the ergonomics, of motor vehicles,
                        including automobiles, motorcycles, trucks, buses, coaches, and vans.</p>
                    <a href="#" class="btn btn-outline-warning">Learn More</a>
                </div>
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="fas fa-cogs fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary">Creativity</h1>
+                   <h1 class="text-secondary"><a href="service.php">Creativity</a> </h1>
                    <p class="text-muted my-4">Creativity does not just happen. It is a cognitive process that produces new ideas or transforms old ideas
                        into updated concepts, according to Brussels Free University psychology professor Liane Gabora</p>
                    <a href="#" class="btn btn-outline-warning">Learn More</a>

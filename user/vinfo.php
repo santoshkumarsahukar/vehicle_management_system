@@ -36,9 +36,10 @@ while ($row = mysqli_fetch_assoc($result)) {
         <li class="list-group-item">Model Number:<?php echo $row['veh_model_no'];?></li>
         <li class="list-group-item">Chassis Number:<?php echo $row['chassis_number'];?></li>
         <li class="list-group-item">Vehicle Manufacture:<?php echo $row['veh_manufacture'];?></li>
+        <li class="list-group-item">Vehicle Price:<?php echo $row['Price'];?></li>
     </ul>
     <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
+        <a href="sales.php" class="card-link">Book</a>
         <a href="home.php" class="card-link">BACK</a>
     </div>
 </div>
