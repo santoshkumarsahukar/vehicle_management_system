@@ -35,6 +35,7 @@ if($result->num_rows>0)
         <th scope="col">mileage</th>
         <th scope="col">horsepower</th>
         <th scope="col">images</th>
+        <th scope="col">Price</th>
     </tr>
     </thead>
 
@@ -54,7 +55,8 @@ if($result->num_rows>0)
             <td><?php echo $row['fuel_capacity'];?></td>
             <td><?php echo $row['mileage'];?></td>
             <td><?php echo $row['horsepower'];?></td>
-            <td><?php echo $row['Images'];?></td>
+            <td><?php echo $row['Image'];?></td>
+            <td><?php echo $row['Price'];?></td>
         </tr>
 
         <?php

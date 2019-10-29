@@ -89,7 +89,7 @@ if(!isset($_SESSION['email']))
                                 <div class="form-group">
                                 <!--NAME-->
                                     <label for="name">Name</label>
-                                   <input type="text" id="name" placeholder="abcd"  name="name" aria-describedby="inputGroupPrepend" required>
+                                   <input type="text" id="name" placeholder="abcd"  name="name" aria-describedby="inputGroupPrepend">
                                    <p id="p1"></p>
                                   </div>
                                   
@@ -103,7 +103,7 @@ if(!isset($_SESSION['email']))
                                   <div class="form-group">
                                     <label for="phone">Phone Number</label>
                                     <input type="tel" pattern="^\d{10}$" id="phone" placeholder="1234567890" name="phone"
-                                     aria-describedby="inputGroupPrepend" required>
+                                     aria-describedby="inputGroupPrepend">
                                      <div class="invalid-feedback">  
                                             Please enter 10 digit mobile number.  
                                         </div>

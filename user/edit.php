@@ -1,5 +1,6 @@
 <?php
 $email=$_POST['email'];
+$phone=$_POST['phone'];
 $id=$_POST['id'];
 $connection=mysqli_connect("localhost","root","","dbms");
 /*if($connection)
@@ -7,7 +8,7 @@ $connection=mysqli_connect("localhost","root","","dbms");
     echo "connected";
 }*/
 
-$sql="UPDATE `user` SET User_email='$email' WHERE id='$id'";
+$sql="UPDATE `user` SET User_email='$email',`User_phone_no`='$phone' WHERE id='$id'";
 $result=mysqli_query($connection,$sql);
 print_r($result);
 if($result)

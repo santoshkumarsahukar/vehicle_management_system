@@ -25,16 +25,43 @@ if(isset($_SESSION['email']))
             if($result->num_rows>0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-    <form  action="edit.php" autocomplete="on" method="POST">
+
+  <!--  <form  action="edit.php" autocomplete="on" method="POST">
         <input type="text" name="id" value="<?php echo $id?>" hidden>
         <h1> Edit</h1>
         <div class="form-group">
-            <!--NAME-->
+            <--NAME--
             <label for="name">Email</label>
             <td>  <input type="text"  name="email" value="<?php echo $row['User_email'];?>"></td>
         </div>
 <input type="submit" value="submit">
-    </form>
+    </form>-->
+
+                    <font color="#8b0000" size="4" face="Elephant">
+                        <br>
+                        <br>
+                        <h1 align="center">EDIT PROFILE</h1>
+                        <br>
+                        <br>
+
+                        <center><form action="edit.php" method="POST" autocomplete="on">
+
+                                <input type="text" name="id" value="<?php echo $id?>" hidden>
+
+                                EMAIL<input type="text" name="email" value="<?php echo $row['User_email'];?>">
+                                <br>
+                                <br>
+                                PHONE<input type="text" name="phone" value="<?php echo $row['User_phone_no'];?>">
+                                <br>
+                                <br>
+                                <input type="submit" value="submit">
+                                <br>
+                                <br>
+                                <button><a href="home.php">BACK</a> </button>
+
+                    </font>
+
+                    </form></center>
 
 
 

@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['email']))
+{
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,7 +13,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>vehicle information</title>
 </head>
 <body>
 <?php
@@ -23,10 +28,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
 <center>
 <div class="card"  align="center" style="width: 30rem;">
-    <img src="images/image3.jpg" class="card-img-top" alt="...">
+    <img src="../admin/images1/<?php echo $row['Image'];?>" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title"><?php echo $row['veh_model_no'];?></h5>
+       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">Mileage:<?php echo $row['mileage'];?></li>
@@ -37,18 +42,40 @@ while ($row = mysqli_fetch_assoc($result)) {
         <li class="list-group-item">Chassis Number:<?php echo $row['chassis_number'];?></li>
         <li class="list-group-item">Vehicle Manufacture:<?php echo $row['veh_manufacture'];?></li>
         <li class="list-group-item">Vehicle Price:<?php echo $row['Price'];?></li>
+        <?php
+        }
+        }
+        ?>
+        <form method="POST" action="sales.php">
+            <?php
+            $sessionvar=$_SESSION['email'];
+            $sql="SELECT * FROM user where User_email='$sessionvar'";
+            $result=mysqli_query($connection,$sql);
+
+            if($result->num_rows>0) {
+
+
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <input type="text" name="id" value="<?php echo $row['id'];?>" hidden>
+            <input type="text" name="veh_id" value="<?php echo $id ?>" hidden>
+            <input type="date" name="date" value="<?php echo date('Y-m-d'); ?>" hidden>
+            <input type="submit" value="BOOK">
+        </form>
+    <?php
+    }
+    }
+            ?>
+
     </ul>
     <div class="card-body">
-        <a href="sales.php" class="card-link">Book</a>
+      <!--  <a href="sales.php" class="card-link">Book</a>-->
         <a href="home.php" class="card-link">BACK</a>
     </div>
 </div>
 </center>
 
-    <?php
-}
-}
-?>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -56,6 +83,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+    <?php
+}
+else{
+    echo "<script>   window.location.href='index.php';</script>";
+
+}
+?>
 
 
 

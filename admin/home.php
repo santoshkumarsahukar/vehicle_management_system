@@ -24,8 +24,10 @@ if(isset($_SESSION['id'])) {
     <button type="button" class="btn btn-outline-primary"><a href="user.php">USERS</a></button>
     <br><br>
         <button type="button" class="btn btn-outline-danger"><a href="sales.php">SALES</a></button>
+        <br><br>
+        <button type="button" class="btn btn-outline-success"><a href="feedback.php">FEEDBACK</a></button>
+        <br><br>
 
-    <br><br>
         <button type="button" class="btn btn-outline-success"><a href="vehicle.php">VEHICLES</a></button>
     <br><br>
         <button type="button" class="btn btn-outline-dark"><a href="services.php">SERVICES</a></button>

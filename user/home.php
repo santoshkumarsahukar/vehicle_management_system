@@ -16,7 +16,7 @@ if(isset($_SESSION['email']))
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
         <title></title>
     </head>
-    <body>
+    <body link="warning">
    <!--navbar-->
    <nav class=" navbar navbar-expand-md navbar-light bg-dark fixed-top"  >
        <a class="navbar-brand" href="#">
@@ -138,26 +138,26 @@ if(isset($_SESSION['email']))
            <!-- end of tittle-->
            <div class="row">
                <div class="col-lg-3 col-sm-6">
-                   <img src="images/image3.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=1">Project One</a></h2>
+                   <img src="../admin/images1/automotive-car-classic-1719647.jpg" class="img-thumbnail">
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=1">AUDI</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-3 col-sm-6">
-                   <img src="images/image1.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href=vinfo.php?id=2">Project One</a></h2>
+                   <img src="../admin/images1/bgd31.jpg" class="img-thumbnail">
+                   <h2 class="my-3 text-warning"><a href=vinfo.php?id=2">MERCEDES BENZ</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-4 col-sm-6">
-                   <img src="images/image2.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=14">Project One</a></h2>
+                   <img src="../admin/images1/th.jpg" width="400" height="150" class="img-thumbnail">
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=3">BMW</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
                <div class="col-lg-3 mt-5 col-sm-6">
-                   <img src="images/bgd11.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=15">Project One</a></h2>
+                   <img src="../admin/images1/th%20(1).jpg" class="img-thumbnail">
+                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=4">DUCATI</a></h2>
                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                        adipisicing elit. Deleniti, consequuntur?</p>
                </div>
@@ -170,34 +170,34 @@ if(isset($_SESSION['email']))
        <div class="container-fulid">
            <!--tittle-->
            <div class="row">
-               <div class="col text-center mb-3">
+               <div class="col text-center mb-3" >
                    <h1 class="text-warning display-2 font-weight-bold">SERVICES</h1>
-                   <p class="lead text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste suscipit qui aliquam.</p>
+                   <p class="lead text-secondary">which is the most appropriate choice for you.</p>
                </div>
 
            </div>
            <div class="row text-center">
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="fas fa-desktop fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary"><a href="service.php">Development</a> </h1>
-                   <p class="text-muted my-4">With our experience from the world of sports car series production, we can support you at every stage
-                       of the entire product development process: from the concept phase to series production.  </p>
-                   <a href="#" class="btn btn-outline-warning">Learn More</a>
+                   <h1 class="text-secondary">Safety Service</h1>
+                   <p class="text-muted my-4">A safety service involves replacing your engine oil, replacing your oil filter, checking under your bonnet, topping up fluids,
+                       inspecting belts and hoses and testing the battery.  </p>
+                   <a href="service.php" class="btn btn-outline-warning">  SERVICES  </a>
                </div>
 
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="far fa-edit fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary"><a href="service.php">Design</a> </h1>
-                   <p class="text-muted my-4"> the process of developing the appearance, and to some extent the ergonomics, of motor vehicles,
-                       including automobiles, motorcycles, trucks, buses, coaches, and vans.</p>
-                   <a href="#" class="btn btn-outline-warning">Learn More</a>
+                   <h1 class="text-secondary">Major Service</h1>
+                   <p class="text-muted my-4"> a major service will cost a little bit more but will also last you for twice as long — 24 months and 30,000km, to be exact.
+                       a diagnostic scan and fault code analysis, replacement of the air filter, replacement of the external fuel filter and non-platinum spark plugs.</p>
+                   <a href="service.php" class="btn btn-outline-warning">  SERVICES  </a>
                </div>
                <div class="col-lg-4 col-sm-10 mx-auto mb-5">
                    <i class="fas fa-cogs fa-6x text-warning mb-3"></i>
-                   <h1 class="text-secondary"><a href="service.php">Creativity</a> </h1>
-                   <p class="text-muted my-4">Creativity does not just happen. It is a cognitive process that produces new ideas or transforms old ideas
-                       into updated concepts, according to Brussels Free University psychology professor Liane Gabora</p>
-                   <a href="#" class="btn btn-outline-warning">Learn More</a>
+                   <h1 class="text-secondary">Premium Service</h1>
+                   <p class="text-muted my-4">Even better than the Major Service and lasting an extra year (36 months) and an extra 15,000km (45,000km total),
+                       a premium service should do everything you’ll get in a major service with just two small but crucial additions.</p>
+                   <a href="service.php" class="btn btn-outline-warning">  SERVICES  </a>
                </div>
 
            </div>
@@ -209,24 +209,25 @@ if(isset($_SESSION['email']))
            <!--tittle-->
            <div class="row">
                <div class="col text-center mb-3">
-                   <h1 class="text-warning display-2">Team</h1>
-                   <p class="lead text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste suscipit qui aliquam.</p>
+                   <h1 class="text-warning display-4">MANUFACTURING COMPANIES</h1>
+                   <p class="lead text-light"></p>
                </div>
 
            </div>
            <!-- end of tittle-->
 
-
+<br>
+           <br>
            <div class="row">
                <div class="col-lg-4 col-sm-10 mx-auto mb-4">
                    <div class="card">
-                       <img src="images/image1.jpg" class="card-img-top">
+                       <img src="images/Mercedes-Benz-logo-640x480.jpg" class="card-img-top">
                        <div class="card-body">
                            <div class="card-tittle">
-                               <h3 class="text-muted">Michael</h3>
+                               <h3 class="text-muted">Mercedes-Benz</h3>
                            </div>
                            <div class="card-subtittle">
-                               <p class="lead text-secondary">Lorem ipsum dolor sit amet.</p>
+                               <p class="lead text-secondary">The Best or Nothing</p>
                            </div>
                            <div class="text-right">
                                <a href="#">
@@ -247,13 +248,14 @@ if(isset($_SESSION['email']))
                </div>
                <div class="col-lg-4  col-sm-10 mx-auto mb-4">
                    <div class="card">
-                       <img src="images/image2.jpg" class="card-img-top">
+                       <img src="images/BMW-logo-640x480.jpg" class="card-img-top">
                        <div class="card-body">
                            <div class="card-tittle">
-                               <h3 class="text-muted">Jack</h3>
+                               <h3 class="text-muted">
+                                   BMW (Bavarian Motor Works) </h3>
                            </div>
                            <div class="card-subtittle">
-                               <p class="lead text-secondary">Lorem ipsum dolor sit amet.</p>
+                               <p class="lead text-secondary">Sheer Driving Pleasure.</p>
                            </div>
                            <div class="text-right">
                                <a href="#">
@@ -274,13 +276,13 @@ if(isset($_SESSION['email']))
                </div>
                <div class="col-lg-4  col-sm-10 mx-auto mb-4">
                    <div class="card">
-                       <img src="images/image3.jpg" class="card-img-top">
+                       <img src="images/audi_logo.jpg" class="card-img-top">
                        <div class="card-body">
                            <div class="card-tittle">
-                               <h3 class="text-muted">Ann</h3>
+                               <h3 class="text-muted">Audi </h3>
                            </div>
                            <div class="card-subtittle">
-                               <p class="lead text-secondary">Lorem ipsum dolor sit amet.</p>
+                               <p class="lead text-secondary">Vorsprung durch Technik.</p>
                            </div>
                            <div class="text-right">
                                <a href="#">

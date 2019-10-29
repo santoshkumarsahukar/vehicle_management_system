@@ -25,7 +25,7 @@ $connection=mysqli_connect("localhost","root","","dbms");
     <h1 align="center">vehicle information</h1>
 <br>
 <br>
-<form action="vehicle1.php" method="POST">
+<form action="vehicle1.php" method="POST" enctype="multipart/form-data">
 
    <center>vehicle_type<input type="text" name="vtype"  ><br><br>
        vehicle_modelno<input type="text" name="vmodel" ><br><br>
@@ -34,8 +34,9 @@ $connection=mysqli_connect("localhost","root","","dbms");
        vehicle_chassis_number<input type="text" name="vcn"  ><br><br>
        vehicle_fuel_capacity<input type="text" name="vfc"  ><br><br>
        vehicle_mileage<input type="text" name="vmi"  ><br><br>
-       vehicle_horsepower<input type="text" name="vhp"  ><br><br>
-       vehicle_images<input type="file" name="image"  ><br><br>
+       vehicle_horsepower<input type="text" name="vhp"><br><br>
+       vehicle_images<input type="file" name="image"><br><br>
+       vehicle_Price<input type="text" name="vprice"><br><br>
        <input type="submit"  name="submit" value="submit">
        <button><a href="home.php">BACK</a></button>
 
