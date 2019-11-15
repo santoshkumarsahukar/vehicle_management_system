@@ -60,16 +60,23 @@ while ($row = mysqli_fetch_assoc($result)) {
             <input type="text" name="id" value="<?php echo $row['id'];?>" hidden>
             <input type="text" name="veh_id" value="<?php echo $id ?>" hidden>
             <input type="date" name="date" value="<?php echo date('Y-m-d'); ?>" hidden>
-            <input type="submit" value="BOOK">
-        </form>
-    <?php
-    }
-    }
+            <br>
+
+
+
+                <?php
+            }
+            }
             ?>
+            <input type="submit" value="BOOK">
+
+        </form>
+
 
     </ul>
+
     <div class="card-body">
-      <!--  <a href="sales.php" class="card-link">Book</a>-->
+
         <a href="home.php" class="card-link">BACK</a>
     </div>
 </div>

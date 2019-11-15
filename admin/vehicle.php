@@ -19,34 +19,116 @@ $connection=mysqli_connect("localhost","root","","dbms");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title></title>
+    <style>
+        label
+        {
+            font-family: "Arial Black";
+            font-size: 10px;
+            color: black;
+
+        }
+        input[type=text],input[type=password],input[type=file]
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: #1d3c41;
+            border-bottom: 1px dotted white;
+            outline: none;
+            border: none;
+            color: #ffffff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        input[type=submit]
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            outline: none;
+            border: none;
+            background:#1d3c41 ;
+            opacity: 0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        input[type=submit]:hover
+        {
+            background: #003366;
+            opacity: 0.7;
+        }
+        div
+        {
+            max-width: 550px;
+            border-radius: 20px;
+            margin: auto;
+            box-sizing: border-box;
+            padding: 40px;
+            color: white;
+            margin-top: 20px;
+            border: 3px dotted black;
+        }
+        button
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            outline: none;
+            border: none;
+            background:#1d3c41 ;
+            opacity: 0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        button:hover
+        {
+          background: #003366;
+            opacity: 0.7;
+        }
+        h1
+        {
+            text-align: center;
+            font-family: Elephant;
+            font-size: 50px;
+        }
+
+    </style>
 </head>
 <body>
-<font color="green" size="05" face="algerian">
-    <h1 align="center">vehicle information</h1>
-<br>
-<br>
+    <h1 align="center">Vehicle Information</h1>
+<div>
+
 <form action="vehicle1.php" method="POST" enctype="multipart/form-data">
 
-   <center>vehicle_type<input type="text" name="vtype"  ><br><br>
-       vehicle_modelno<input type="text" name="vmodel" ><br><br>
-       vehicle_manufacture<input type="text" name="vman"  ><br><br>
-       vehicle_specification<input type="text" name="vspec"  ><br><br>
-       vehicle_chassis_number<input type="text" name="vcn"  ><br><br>
-       vehicle_fuel_capacity<input type="text" name="vfc"  ><br><br>
-       vehicle_mileage<input type="text" name="vmi"  ><br><br>
-       vehicle_horsepower<input type="text" name="vhp"><br><br>
-       vehicle_images<input type="file" name="image"><br><br>
-       vehicle_Price<input type="text" name="vprice"><br><br>
+    <label>vehicle_type</label>
+  <input type="text" name="vtype"  ><br>
+    <label>vehicle_modelno</label>
+       <input type="text" name="vmodel" ><br>
+    <label>vehicle_manufacture</label>
+       <input type="text" name="vman"  ><br>
+    <label>vehicle_specification</label>
+       <input type="text" name="vspec"  ><br>
+    <label>vehicle_chassis_number</label>
+       <input type="text" name="vcn"  ><br>
+    <label>vehicle_fuel_capacity</label>
+       <input type="text" name="vfc"  ><br>
+    <label> vehicle_mileage</label>
+      <input type="text" name="vmi"  ><br>
+    <label> vehicle_horsepower</label>
+      <input type="text" name="vhp"><br>
+    <label>vehicle_images</label>
+       <input type="file" name="image"><br>
+    <label>vehicle_Price</label>
+       <input type="text" name="vprice"><br>
        <input type="submit"  name="submit" value="submit">
+    <br><br>
        <button><a href="home.php">BACK</a></button>
 
-
-
-
-
-   </center></font>
-
 </form>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

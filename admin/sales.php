@@ -30,7 +30,7 @@ if(isset($_SESSION['id']))
             <th scope="col">user_id</th>
             <th scope="col">vehicle_id</th>
             <th scope="col">order_date</th>
-            <th scope="col">Price</th>
+            
         </tr>
         </thead>
 
@@ -45,7 +45,7 @@ if(isset($_SESSION['id']))
                 <td><?php echo $row['user_id'];?></td>
                 <td><?php echo $row['veh_id'];?></td>
                 <td><?php echo $row['order_date'];?></td>
-                <td><?php echo $row['amount'];?></td>
+
             </tr>
 
             <?php

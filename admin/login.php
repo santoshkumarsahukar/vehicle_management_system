@@ -45,18 +45,21 @@ if(!isset($_SESSION['id']))
     </head>
     <body>
 
-    <font color="#8b0000" size="4" face="Elephant">
+
         <br>
         <br>
         <h1 align="center">ADMIN LOGIN</h1>
         <br>
         <br>
 
-       <center><form action="login1.php" method="POST" autocomplete="on">
-        ADMIN_ID <input type="text" name="id">
+
+        <div><form action="login1.php" method="POST" autocomplete="on">
+                <label>ADMIN_ID </label>
+        <input type="text" name="id">
             <br>
             <br>
-            ADMIN_PASSWORD<input type="password" name="password">
+                <label>ADMIN_PASSWORD</label>
+            <input type="password" name="password">
                <br>
                <br>
                <input type="submit" value="submit">
@@ -64,10 +67,81 @@ if(!isset($_SESSION['id']))
                <br>
                <button><a href="http://localhost/dbmsproject/user/index.php">switch user</a></button>
 
-        </font>
 
-     </form></center>
+     </form>
+        </div>
+           <style>
+               label
+               {
+                   font-size: 20px;
 
+               }
+               input[type=text],input[type=password]
+               {
+                   width: 100%;
+                   box-sizing: border-box;
+                   padding: 12px 5px;
+                   background: #1d3c41;
+                   border-bottom: 1px dotted white;
+                   outline: none;
+                   border: none;
+                   color: #ffffff;
+                   border-radius: 5px;
+                   margin: 5px;
+                   font-weight: bold;
+               }
+               input[type=submit]
+               {
+                   width: 100%;
+                   box-sizing: border-box;
+                   padding: 10px 0;
+                   outline: none;
+                   border: none;
+                   background:#1d3c41 ;
+                   opacity: 0.7;
+                   border-radius: 20px;
+                   font-size: 20px;
+                   color: #ffffff;
+               }
+               input[type=submit]:hover
+               {
+                   background: #003366;
+                   opacity: 0.7;
+               }
+               div
+               {
+                   max-width: 450px;
+                   border-radius: 20px;
+                   margin: auto;
+                   background: #4fa2c4;
+                   box-sizing: border-box;
+                   padding: 40px;
+                   color: white;
+                   margin-top: 20px;
+               }
+               button
+               {
+                   width: 100%;
+                   box-sizing: border-box;
+                   padding: 10px 0;
+                   outline: none;
+                   border: none;
+                   background:#1d3c41 ;
+                   opacity: 0.7;
+                   border-radius: 20px;
+                   font-size: 20px;
+                   color: #ffffff;
+
+               }
+               h1
+               {
+                   text-align: center;
+                   font-family: Elephant;
+                   font-size: 30px;
+               }
+
+
+           </style>
 
     </body>
     </html>

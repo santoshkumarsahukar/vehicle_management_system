@@ -16,7 +16,7 @@ window.location.href='home.php';</script>";
 }
 else
 {
-    echo "<script>alert('PLEASE TRY AGAIN...');
+    echo "<script>alert('FAILED.PLEASE TRY AGAIN LATER.');
 window.location.href='home.php';</script>";
 }
 

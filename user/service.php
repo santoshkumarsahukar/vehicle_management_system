@@ -13,19 +13,105 @@ if(isset($_SESSION['email'])) {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title>Service</title>
+        <style>
+            input[type=text],input[type=email],input[type=date]
+            {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 5px;
+                background: #1d3c41;
+                border-bottom: 1px dotted white;
+                outline: none;
+                border: none;
+                color: #ffffff;
+                border-radius: 5px;
+                margin: 5px;
+                font-weight: bold;
+            }
+            select
+            {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 5px;
+                background: #1d3c41;
+                border-bottom: 1px dotted white;
+                outline: none;
+                border: none;
+                color: #ffffff;
+                border-radius: 5px;
+                margin: 5px;
+                font-weight: bold;
+            }
+            input[type=submit]
+            {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                outline: none;
+                border: none;
+                background:#1d3c41 ;
+                opacity: 0.7;
+                border-radius: 20px;
+                font-size: 20px;
+                color: #ffffff;
+            }
+            input[type=submit]:hover
+            {
+                background: #003366;
+                opacity: 0.7;
+            }
+            div
+            {
+                max-width: 450px;
+                border-radius: 20px;
+                margin: auto;
+                background: #4fa2c4;
+                box-sizing: border-box;
+                padding: 40px;
+                color: white;
+                margin-top: -20px;
+            }
+            button
+            {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                outline: none;
+                border: none;
+                background:#1d3c41 ;
+                opacity: 0.7;
+                border-radius: 20px;
+                font-size: 20px;
+                color: #ffffff;
+
+            }
+            h1
+            {
+                text-align: center;
+                font-family: Elephant;
+                font-size: 30px;
+            }
+            a
+            {
+                font-family: Elephant;
+                font-size: 15px;
+                color: white;
+            }
+
+        </style>
+
+
     </head>
     <body>
 
-    <font color="#8b0000" size="4" face="Elephant">
-        <br>
-        <br>
         <h1 align="center">SERVICE DETAILS</h1>
         <br>
         <br>
+        <div>
 
-        <center><form action="service1.php" method="POST" autocomplete="on">
+  <form action="service1.php" method="POST" autocomplete="on">
 
-               DATE: <input type="date"   value="<?php echo date('Y-m-d');?>" name="date">
+               DATE: <input type="date"   value="<?php echo date('Y-m-d');?>" name="date" readonly>
                 <br>
                 <br>
                 SERVICE TYPE:<select  id="branch" name="branch" onchange="setprice()">
@@ -40,7 +126,7 @@ if(isset($_SESSION['email'])) {
                 VEHICLE NUMBER:<input type="text" name="vehno" placeholder="KA 36 M 4582">
                 <br>
                 <br>
-                AMOUNT:<input id="price" type="text" name="price" >
+                AMOUNT:<input id="price" type="text" name="price" readonly >
                 <br>
                 <br>
                 MESSAGE:<input id="msg" type="text" name="msg">
@@ -69,9 +155,10 @@ if(isset($_SESSION['email'])) {
 
                 <button><a href="home.php" >BACK</a></button>
 
-    </font>
 
-    </form></center>
+
+    </form>
+            </div>
 
     <script>
             function  setprice()

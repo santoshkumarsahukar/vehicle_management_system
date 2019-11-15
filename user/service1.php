@@ -13,11 +13,11 @@ $query="INSERT INTO `services`(`svr_date`, `amount`, `desp`, `User_id`, `msg`, `
 $result=mysqli_query($connection,$query);
 if($result)
 {
-    echo "<script>alert('thank you.');
+    echo "<script>alert('THANK YOU.');
   window.location.href='home.php';</script>";
 }
 else{
-    echo "<script>alert('try again');
+    echo "<script>alert('TRY AGAIN.');
  </script>";
 }
 ?>

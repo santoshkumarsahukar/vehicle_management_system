@@ -16,8 +16,8 @@ if($name!='' && $email!='' && $phone!='' && $address!='' && $password!='' && $cp
         {
             echo "connected";
         }*/
-        $query = "INSERT INTO `user`( `User_name`, `User_email`, `User_address`, `User_phone_no`, `User_password`)
-        VALUES ('$name','$email','$address','$phone','$hashedpassword');";
+        $query = "INSERT INTO `user`( `User_name`, `User_email`, `User_address`, `User_phone_no`, `User_password`,`is_active`)
+        VALUES ('$name','$email','$address','$phone','$hashedpassword',1);";
         $result = mysqli_query($connection, $query);
         if ($result) {
             echo "

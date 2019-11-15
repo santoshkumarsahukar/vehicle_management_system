@@ -26,10 +26,12 @@ if(isset($_SESSION['id']))
         <thead class="thead-dark">
         <tr>
             <th scope="col">service_id</th>
-            <th scope="col">sales_id</th>
+            <th scope="col">user_id</th>
             <th scope="col">service_date</th>
             <th scope="col">service_amount</th>
             <th scope="col">service_type</th>
+            <th scope="col">service_Msg</th>
+            <th scope="col">Vehicle_number</th>
         </tr>
         </thead>
 
@@ -41,10 +43,12 @@ if(isset($_SESSION['id']))
 
             <tr>
                 <th scope="col"><?php echo $row['serv_id'];?></th>
-                <td><?php echo $row['sales_id'];?></td>
+                <td><?php echo $row['User_id'];?></td>
                 <td><?php echo $row['svr_date'];?></td>
                 <td><?php echo $row['amount'];?></td>
                 <td><?php echo $row['desp'];?></td>
+                <td><?php echo $row['msg'];?></td>
+                <td><?php echo $row['vehicleno'];?></td>
             </tr>
 
             <?php

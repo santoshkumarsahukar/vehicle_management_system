@@ -29,7 +29,7 @@ if(isset($_SESSION['id']))
             <th scope="col">User_name</th>
             <th scope="col">User_email</th>
             <th scope="col">User_Message</th>
-            <th scope="col">option</th>
+
         </tr>
         </thead>
         <?php
@@ -41,7 +41,7 @@ if(isset($_SESSION['id']))
                 <td><?php echo $row['Name'];?></td>
                 <td><?php echo $row['Email'];?></td>
                 <td><?php echo $row['Message'];?></td>
-                <td><?php echo "<td><a href=delete.php?id=".$row['Id']."><button class='btn-danger' >Delete</button></a></td>"?>
+               
             </tr>
 
             <?php

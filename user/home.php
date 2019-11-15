@@ -14,7 +14,7 @@ if(isset($_SESSION['email']))
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-        <title></title>
+        <title>vehicle</title>
     </head>
     <body link="warning">
    <!--navbar-->
@@ -41,7 +41,9 @@ if(isset($_SESSION['email']))
            </ul>
            <form class="form-inline ml-3">
               <!-- <div class="input-group">
+
                    <input type="text" class="form-control" placeholder="search">-->
+
                <a href="logout.php" class="btn btn-dark btn-lg px-4 ml-3">LOGOUT</a>
               <!-- <button><a href="logout.php">logout</a> </button>-->
                    <div class="input-group-append">
@@ -90,14 +92,7 @@ if(isset($_SESSION['email']))
                <img src="images/bgd31.jpg" class="d-block w-100" alt="...">
            </div>
        </div>
-       <!--<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-           <span class="sr-only">Previous</span>
-       </a>
-       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-           <span class="sr-only">Next</span>
-       </a>-->
+
    </div>
    <div class="main-text hidden-xs ">
        <div>
@@ -119,53 +114,6 @@ if(isset($_SESSION['email']))
    </div>
    </div>
    <!--end of banner-->
-
-   <!--skills-->
-   <section class="bg-light p-5">
-       <div class="container-fulid">
-           <!--tittle-->
-           <div class="row">
-               <div class="col text-center mb-3">
-                   <h1 class="text-warning display-2 font-weight-bold">SALES</h1>
-                   <p class="lead text-info">Great Prices. Great Vehicles. Great Service.</p>
-
-               </div>
-
-           </div>
-           <!-- end of tittle-->
-
-           <!--vehicles-->
-           <!-- end of tittle-->
-           <div class="row">
-               <div class="col-lg-3 col-sm-6">
-                   <img src="../admin/images1/automotive-car-classic-1719647.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=1">AUDI</a></h2>
-                   <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
-                       adipisicing elit. Deleniti, consequuntur?</p>
-               </div>
-               <div class="col-lg-3 mt-3 col-sm-6">
-                   <img src="../admin/images1/bgd31.jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href=vinfo.php?id=2">MERCEDES BENZ</a></h2>
-                   <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
-                       adipisicing elit. Deleniti, consequuntur?</p>
-               </div>
-               <div class="col-lg-3 mt-4 col-sm-6">
-                   <img src="../admin/images1/th.jpg" width="400" height="150" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=3">BMW</a></h2>
-                   <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
-                       adipisicing elit. Deleniti, consequuntur?</p>
-               </div>
-               <div class="col-lg-3 mt-5 col-sm-6">
-                   <img src="../admin/images1/th%20(1).jpg" class="img-thumbnail">
-                   <h2 class="my-3 text-warning"><a href="vinfo.php?id=4">DUCATI</a></h2>
-                   <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
-                       adipisicing elit. Deleniti, consequuntur?</p>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!--end of project-->
    <section class="bg-light p-5">
        <div class="container-fulid">
            <!--tittle-->
@@ -203,6 +151,83 @@ if(isset($_SESSION['email']))
            </div>
        </div>
    </section>
+
+   <!--skills-->
+   <section class="bg-light p-5">
+       <div class="container-fulid">
+           <!--tittle-->
+           <div class="row">
+               <div class="col text-center mb-3">
+                   <h1 class="text-warning display-2 font-weight-bold">SALES</h1>
+                   <p class="lead text-info">Great Prices. Great Vehicles. Great Service.</p>
+
+               </div>
+
+           </div>
+           <!-- end of tittle-->
+           <!--vehicles-->
+           <!-- end of tittle-->
+           <?php
+    $connection=mysqli_connect("localhost","root","","dbms");
+    $sql="SELECT * FROM vehicle";
+    $result=mysqli_query($connection,$sql);
+
+    if($result->num_rows>0) {
+?>
+           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+        <?php
+        $i=0;
+        while ($row = mysqli_fetch_assoc($result)) {
+
+
+            ?>
+<!--            <div class="carousel-item --><?php //if($i==0) echo 'active';?><!--">-->
+<!--                <img src="../admin/images1/--><?php //echo $row['Image'];?><!--" class="d-block w-100" alt="...">-->
+<!--            </div>-->
+
+
+            <div class="carousel-item <?php if($i==0) echo 'active';?>">
+                <img src="../admin/images1/<?php echo $row['Image'];?>" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="vinfo.php?id=<?php echo $row['veh_id'];?>">
+                    <h5><?php echo $row['veh_model_no'];?></h5>
+                    <p><?php echo $row['veh_spec'];?></p></a>
+                </div>
+            </div>
+
+            <?php
+            $i++;
+        }
+        ?>
+               </div>
+               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+               </a>
+           </div>
+        <?php
+        }
+        ?>
+
+
+
+
+
+   </section>
+
+
+   <!--end of project-->
+
    <!--manfactures-->
    <section class="bg-secondary p-2 p-sm-5">
        <div class="container-fulid">
