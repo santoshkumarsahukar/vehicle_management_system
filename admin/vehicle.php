@@ -98,7 +98,7 @@ $connection=mysqli_connect("localhost","root","","dbms");
     </style>
 </head>
 <body>
-    <h1 align="center">Vehicle Information</h1>
+    <h1 align="center">Add Vehicles</h1>
 <div>
 
 <form action="vehicle1.php" method="POST" enctype="multipart/form-data">

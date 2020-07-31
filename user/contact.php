@@ -12,7 +12,7 @@ $result=mysqli_query($connection,"call getcontact(NULL,@name,@email,@message)");
 if($result)
 {
     echo"
-      <script> alert('WILL CONTACT YOU SOON..');
+      <script> alert('THANK YOU FOR YOUR FEEDBACK.');
       window.location.href='home.php'</script>";
 
 }

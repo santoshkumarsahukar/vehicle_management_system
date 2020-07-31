@@ -41,7 +41,7 @@ if(isset($_SESSION['email']))
                                  <br>
                                 EMAIL<input type="email" name="email" value="<?php echo $row['User_email'];?>" disabled>
                                 <br>
-                                PHONE<input type="text" name="phone" value="<?php echo $row['User_phone_no'];?>">
+                                PHONE<input name="phone" pattern="^\d{10}$"  title="10 digit number" type="text"  value="<?php echo $row['User_phone_no'];?>">
                                 <br>
                                 ADDRESS<input type="text" name="address" value="<?php echo $row['User_address'];?>">
                                <br>

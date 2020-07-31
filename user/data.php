@@ -41,7 +41,8 @@ if($name!='' && $email!='' && $phone!='' && $address!='' && $password!='' && $cp
     } else {
         echo "
     <script>
-    alert('INCORRECT PASSWORD');
+    alert('INCORRECT PASSWORD ');
+	window.location.href='index.php';
     </script>";
     }
 }

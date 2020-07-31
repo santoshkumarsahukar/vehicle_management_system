@@ -3,6 +3,7 @@ session_start();
 if(isset($_SESSION['email']))
 {
 ?>
+    <a class="hiddenanchor" id="home"></a>
     <!doctype html>
     <html lang="en">
     <head>
@@ -19,7 +20,7 @@ if(isset($_SESSION['email']))
     <body link="warning">
    <!--navbar-->
    <nav class=" navbar navbar-expand-md navbar-light bg-dark fixed-top"  >
-       <a class="navbar-brand" href="#">
+       <a class="navbar-brand" href="#home">
           <!-- <img src="images/image2.jpg" width="30" height="30" alt="">-->
            <i class="fas fa-child text-warning fa-3x"></i>
        </a>
@@ -30,14 +31,16 @@ if(isset($_SESSION['email']))
        <div class="collapse navbar-collapse justify-content-between" id="nav">
            <ul class="navbar-nav">
                <li class="nav-item"><a class="nav-link text-light text-uppercase
-        font-weight-bold px-3"  href="#">Home</a></li>
+        font-weight-bold px-3"  href="#home">Home</a></li>
                <li class="nav-item"><a class="nav-link text-light text-uppercase
-          font-weight-bold px-3 " href="#">Services</a></li>
+          font-weight-bold px-3 " href="#toservice">Services</a></li>
 
                <li class="nav-item"><a  class="nav-link text-light
-          text-uppercase font-weight-bold px-3"href="#">Vehicles</a></li>
+          text-uppercase font-weight-bold px-3"href="#sales">Vehicles</a></li>
                <li class="nav-item"><a  class="nav-link text-light
-          text-uppercase font-weight-bold px-3"href="#">Contact</a></li>
+          text-uppercase font-weight-bold px-3"href="#companies">Companies</a></li>
+               <li class="nav-item"><a  class="nav-link text-light
+          text-uppercase font-weight-bold px-3"href="#feedback">Contact</a></li>
            </ul>
            <form class="form-inline ml-3">
               <!-- <div class="input-group">
@@ -55,20 +58,16 @@ if(isset($_SESSION['email']))
 
                        if($result->num_rows>0) {
 
-
-
                            while ($row = mysqli_fetch_assoc($result)) {
-                               ?>
-
-
-                               <a href="update.php?id=<?php echo $row['id'];?>" class="btn btn-dark btn-lg px-4 ml-3">
-                                  EDIT
-                               </a>
-
-                               <?php
+                               $id1= $row['id'];
                            }
+
                        }
                        ?>
+                                                      <a href="update.php?id=<?php echo $id1?>" class="btn btn-dark btn-lg px-4 ml-3">
+                                                          EDIT
+                                                      </a>
+
                    </div>
 
        </div>
@@ -114,6 +113,7 @@ if(isset($_SESSION['email']))
    </div>
    </div>
    <!--end of banner-->
+   <a class="hiddenanchor" id="toservice"></a>
    <section class="bg-light p-5">
        <div class="container-fulid">
            <!--tittle-->
@@ -153,6 +153,8 @@ if(isset($_SESSION['email']))
    </section>
 
    <!--skills-->
+   <a class="hiddenanchor" id="sales"></a>
+
    <section class="bg-light p-5">
        <div class="container-fulid">
            <!--tittle-->
@@ -201,10 +203,13 @@ if(isset($_SESSION['email']))
                 </div>
             </div>
 
+
             <?php
             $i++;
         }
         ?>
+
+
                </div>
                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -215,13 +220,14 @@ if(isset($_SESSION['email']))
                    <span class="sr-only">Next</span>
                </a>
            </div>
+
         <?php
         }
+    else
+    {
+        echo "<script>alert('No Vehicle For Sale..');</script>";
+    }
         ?>
-
-
-
-
 
    </section>
 
@@ -229,7 +235,9 @@ if(isset($_SESSION['email']))
    <!--end of project-->
 
    <!--manfactures-->
+   <a class="hiddenanchor" id="companies"></a>
    <section class="bg-secondary p-2 p-sm-5">
+
        <div class="container-fulid">
            <!--tittle-->
            <div class="row">
@@ -330,12 +338,15 @@ if(isset($_SESSION['email']))
            </div>
        </div>
    </section>
+
+   <a class="hiddenanchor" id="feedback"></a>
    <section class="bg-light p-5 ">
        <div class="container-fulid">
            <!--tittle-->
+
            <div class="row">
                <div class="col text-center mb-3">
-                   <h1 class="text-warning display-2">Contact us</h1>
+                   <h1 class="text-warning display-2">FEEDBACK</h1>
                    <p class="lead text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                        Iste suscipit qui aliquam.</p>
                </div>

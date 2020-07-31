@@ -16,7 +16,7 @@
     <div  class="row bg-info justify-content-center
   align-items-center" style="height:100vh" >
         <div class="col-sm-10 text-center">
-           <marquee scrollamount="20"><h1 class="display-2 text-capitalize"><span class="text-warning  font-weight-bold">VEHICLE MANAGEMENT SYSTEM</span></marquee>
+           <marquee scrollamount="30"><h1 class="display-2 text-capitalize"><span class="text-warning  font-weight-bold">VEHICLE MANAGEMENT SYSTEM</span></marquee>
             <!-- <span class="text-white font-weight-bold">website</span></h1>
          <h2 class="font-weight-light font-italic text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>-->
             <a href="user/index.php" class="btn btn-warning btn-lg px-4 ml-3">USER LOGIN</a>

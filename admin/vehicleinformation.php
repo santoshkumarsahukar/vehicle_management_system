@@ -25,17 +25,18 @@ if($result->num_rows>0)
 <table class="table">
     <thead class="thead-dark">
     <tr>
-        <th scope="col">vehicle_id</th>
-        <th scope="col">vehicle_type</th>
-        <th scope="col">vehicle_manufacture</th>
-        <th scope="col">vehicle_modelno</th>
-        <th scope="col">vehicle_specification</th>
-        <th scope="col">chassis_number</th>
-        <th scope="col">fuel_capacity</th>
-        <th scope="col">mileage</th>
-        <th scope="col">horsepower</th>
-        <th scope="col">images</th>
+        <th scope="col">Vehicle_Id</th>
+        <th scope="col">Vehicle_Type</th>
+        <th scope="col">Vehicle_Manufacture</th>
+        <th scope="col">Vehicle_Modelno</th>
+        <th scope="col">Vehicle_Specification</th>
+        <th scope="col">Chassis_Number</th>
+        <th scope="col">Fuel_Capacity</th>
+        <th scope="col">Mileage</th>
+        <th scope="col">Horsepower</th>
+        <th scope="col">Images</th>
         <th scope="col">Price</th>
+        <th scope="col">Option</th>
     </tr>
     </thead>
 
@@ -57,6 +58,7 @@ if($result->num_rows>0)
             <td><?php echo $row['horsepower'];?></td>
             <td><?php echo $row['Image'];?></td>
             <td><?php echo $row['Price'];?></td>
+            <?php echo "<td><a href=delete.php?id=".$row['veh_id']."><button class='btn-danger' >Delete</button></a></td>"?>
         </tr>
 
         <?php

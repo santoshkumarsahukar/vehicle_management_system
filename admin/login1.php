@@ -11,11 +11,9 @@ $sql_e="SELECT * FROM `admin` WHERE admin_id='$id' AND Password='$password'";
 $result=mysqli_query($connection,$sql_e);
 if($result->num_rows>0)
 {
-    echo "<script> alert('SUCCESSFUL');</script>";
     session_start();
     $_SESSION['id']=$id;
-    echo "
-		<script>
+    echo "<script> alert('SUCCESSFUL');
 		window.location.href='home.php';
 		</script>";
 

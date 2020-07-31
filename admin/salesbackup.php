@@ -6,6 +6,7 @@ if(isset($_SESSION['id']))
 
     ?>
 
+
     <html>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -14,24 +15,23 @@ if(isset($_SESSION['id']))
 
     <?php
 
-    $sql="SELECT * FROM user;";
+    $sql="SELECT * FROM sales_backup;";
     $result=mysqli_query($connection,$sql);
     $resultcheck=mysqli_num_rows($result);
 
-//SELECT `User_id`, `User_name`, `User_email`, `User_address`, `User_phone_no`, `User_password` FROM `user` WHERE 1
+    //SELECT `User_id`, `User_name`, `User_email`, `User_address`, `User_phone_no`, `User_password` FROM `user` WHERE 1
     if($resultcheck>0)
     {
     ?>
     <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">User_id</th>
-            <th scope="col">User_name</th>
-            <th scope="col">User_email</th>
-            <th scope="col">User_address</th>
-            <th scope="col">User_phone_no</th>
-            <th scope="col">User_password</th>
-            <th scope="col">Is-active</th>
+            <th scope="col">backup_id</th>
+            <th scope="col">sales_id</th>
+            <th scope="col">user_id</th>
+            <th scope="col">vehicle_id</th>
+            <th scope="col">order_date</th>
+
         </tr>
         </thead>
 
@@ -42,13 +42,12 @@ if(isset($_SESSION['id']))
             ?>
 
             <tr>
-                <th scope="col"><?php echo $row['id'];?></th>
-                <td><?php echo $row['User_name'];?></td>
-                <td><?php echo $row['User_email'];?></td>
-                <td><?php echo $row['User_address'];?></td>
-                <td><?php echo $row['User_phone_no'];?></td>
-                <td><?php echo $row['User_password'];?></td>
-                <td><?php echo $row['is_active'];?></td>
+                <th scope="col"><?php echo $row['sb_id'];?></th>
+                <td><?php echo $row['sales_id'];?></td>
+                <td><?php echo $row['user_id'];?></td>
+                <td><?php echo $row['veh_id'];?></td>
+                <td><?php echo $row['order_date'];?></td>
+
             </tr>
 
             <?php
@@ -64,9 +63,17 @@ if(isset($_SESSION['id']))
     </table>
     <a href="home.php">
         <button class="btn-primary" value="logout">BACK</button>
-    </a>
     </body>
     </html>
+
+
+
+
+
+
+
+
+
     <?php
 }
 else

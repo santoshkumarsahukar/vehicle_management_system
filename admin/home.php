@@ -73,10 +73,13 @@ if(isset($_SESSION['id'])) {
 
         <button type="button" class="btn btn-outline-success"><a href="vehicleinformation.php">VEHICLES INFORMATION</a></button>
     <br><br>
+    <button type="button" class="btn btn-outline-success"><a href="salesbackup.php">SALES BACKUP</a></button>
 
+    <br><br>
+    <button type="button" class="btn btn-outline-success"><a href="vehiclebackup.php">VEHICLE BACKUP</a></button>
     <!-- Optional JavaScript -->
-
-    <button><a href="http://localhost/dbmsproject/user/logout.php">logout</a> </button>
+<br><br>
+    <button><a href="../user/logout.php">logout</a> </button>
 </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

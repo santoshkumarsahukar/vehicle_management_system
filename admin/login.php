@@ -149,7 +149,7 @@ if(!isset($_SESSION['id']))
     }
     else
         {
-            echo "window.href.location='home.php";
+            echo "<script>window.location.href='home.php'</script>";
         }
     ?>
 
